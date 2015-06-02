@@ -1,2 +1,3 @@
 # TestWorld
-A game world made foe testing...
+
+A hello world like game made for testing.
