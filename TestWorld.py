@@ -2,7 +2,7 @@
 #
 # Game Test World v0.1
 # Created by Sohil876 (Arsh Khan)
-# Using Python 2.x, PyGame 1.9.1 and PygAnim
+# Requirements: Python 2.x, PyGame 1.9.1 and PygAnim
 #
 # The animation images come from POW Studios, and are available under an
 # Attribution-only license. Check them out, they're really nice.
