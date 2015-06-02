@@ -1,6 +1,6 @@
 #!/usr/bin/python
 #
-# Game Test World v0.1
+# Test World v0.1
 # Created by Sohil876 (Arsh Khan)
 # Requirements: Python 2.x, PyGame 1.9.1 and PygAnim
 #
