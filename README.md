@@ -1,4 +1,3 @@
-
 # TestWorld:
 A hello world like game created for game related testings.
 
