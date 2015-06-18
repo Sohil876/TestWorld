@@ -76,7 +76,7 @@ moveConductor = pyganim.PygConductor(animObjs)
 
 direction = DOWN # player starts off facing down (front)
 
-BASICFONT = pygame.font.Font('fonts/Roboto-Regular.ttf', 18)
+BASICFONT = pygame.font.Font('fonts/Roboto/Roboto-Light.ttf', 18)
 WHITE = (255, 255, 255)
 
 mainClock = pygame.time.Clock()
