@@ -1,6 +1,7 @@
 #!/usr/bin/python
 #
-# Test World v0.1
+# Test World
+#
 # Created by Sohil876 (Arsh Khan)
 # Requirements: Python 2.x, PyGame 1.9.1 and PygAnim
 #
@@ -37,8 +38,10 @@ RIGHT = 'right'
 # set up the window
 WINDOWWIDTH = 800
 WINDOWHEIGHT = 400
-windowSurface = pygame.display.set_mode((WINDOWWIDTH, WINDOWHEIGHT), 0, 32)
+SIZE = (800,400)
+windowSurface = pygame.display.set_mode(SIZE, DOUBLEBUF, 0)
 pygame.display.set_caption('Test World!')
+flags = windowSurface.get_flags()
 backgroundImage = pygame.image.load('images/swamp.png').convert()
 
 # load and set bgm
@@ -133,6 +136,14 @@ while True:
                 moveLeft = False
                 if not moveUp and not moveDown:
                     direction = RIGHT
+            elif event.key == K_f:
+                if flags&FULLSCREEN == False:
+                    flags|=FULLSCREEN
+                    pygame.display.set_mode(SIZE, flags, 0)
+                else:
+                    flags^=FULLSCREEN
+                    pygame.display.set_mode(SIZE, flags, 0)
+                    
             
         elif event.type == KEYUP:
             if event.key in (K_LSHIFT, K_RSHIFT):
