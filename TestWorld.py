@@ -36,9 +36,9 @@ LEFT = 'left'
 RIGHT = 'right'
 
 # set up the window
-infoObject = pygame.display.Info()
-WINDOWWIDTH = infoObject.current_w
-WINDOWHEIGHT = infoObject.current_h
+displayinfo = pygame.display.Info()
+WINDOWWIDTH = displayinfo.current_w
+WINDOWHEIGHT = displayinfo.current_h
 SIZE = (WINDOWWIDTH, WINDOWHEIGHT)
 windowSurface = pygame.display.set_mode(SIZE, DOUBLEBUF, 0)
 pygame.display.set_caption('Test World!')
@@ -239,5 +239,5 @@ while True:
         y = WINDOWHEIGHT - playerHeight
 
     pygame.display.update()
-    mainClock.tick(30) # Feel free to experiment with any FPS setting.
+    mainClock.tick(60) # Feel free to experiment with any FPS setting.
 
