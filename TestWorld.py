@@ -36,9 +36,10 @@ LEFT = 'left'
 RIGHT = 'right'
 
 # set up the window
-WINDOWWIDTH = 800
-WINDOWHEIGHT = 400
-SIZE = (800,400)
+infoObject = pygame.display.Info()
+WINDOWWIDTH = infoObject.current_w
+WINDOWHEIGHT = infoObject.current_h
+SIZE = (WINDOWWIDTH, WINDOWHEIGHT)
 windowSurface = pygame.display.set_mode(SIZE, DOUBLEBUF, 0)
 pygame.display.set_caption('Test World!')
 flags = windowSurface.get_flags()
