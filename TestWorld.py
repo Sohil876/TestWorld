@@ -14,40 +14,31 @@
 # http://www.videogamesprites.net/ChronoTrigger
 
 # Import libraries
-import pygame
+import pygame, sys, time
 from pygame.locals import *
-import sys
-import time
 import libs.pyganim as pyganim
 
 # initialize the game
 pygame.init()
 
-# initialize mixer for sound
-#pygame.mixer.init()
-
 # set mouse visibility
 pygame.mouse.set_visible(False)
 
-# define some constants
+# define constants
 UP = 'up'
 DOWN = 'down'
 LEFT = 'left'
 RIGHT = 'right'
 
 # set up the window
-displayinfo = pygame.display.Info()
-WINDOWWIDTH = displayinfo.current_w
-WINDOWHEIGHT = displayinfo.current_h
+displayInfo = pygame.display.Info()
+WINDOWWIDTH = displayInfo.current_w
+WINDOWHEIGHT = displayInfo.current_h
 SIZE = (WINDOWWIDTH, WINDOWHEIGHT)
 windowSurface = pygame.display.set_mode(SIZE, DOUBLEBUF, 0)
 pygame.display.set_caption('Test World!')
 flags = windowSurface.get_flags()
 backgroundImage = pygame.image.load('images/swamp.png').convert()
-
-# load and set bgm
-#bgm = pygame.mixer.Sound('sounds/SETMUSIC.wav')
-#bgm.play()
 
 # load the "standing" sprites (these are single images, not animations)
 front_standing = pygame.image.load('images/characterimages/crono_front.gif')
@@ -80,7 +71,7 @@ moveConductor = pyganim.PygConductor(animObjs)
 
 direction = DOWN # player starts off facing down (front)
 
-BASICFONT = pygame.font.Font('fonts/Roboto/Roboto-Light.ttf', 18)
+BASICFONT = pygame.font.Font('fonts/Roboto/Roboto-Regular.ttf', 18)
 WHITE = (255, 255, 255)
 
 mainClock = pygame.time.Clock()
@@ -91,7 +82,7 @@ y = 285
 WALKRATE = 3
 RUNRATE = 6
 
-instructionSurf = BASICFONT.render('Arrow keys to move. Hold shift to run.', True, WHITE)
+instructionSurf = BASICFONT.render('Arrow keys to move. Hold shift to run. Press F key for fullscreen toggle.', True, WHITE)
 instructionRect = instructionSurf.get_rect()
 instructionRect.bottomleft = (10, WINDOWHEIGHT - 10)
 running = moveUp = moveDown = moveLeft = moveRight = False
