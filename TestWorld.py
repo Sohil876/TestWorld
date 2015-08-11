@@ -14,8 +14,10 @@
 # http://www.videogamesprites.net/ChronoTrigger
 
 # Import libraries
-import pygame, sys, time
+import pygame
 from pygame.locals import *
+import sys
+import time
 import libs.pyganim as pyganim
 
 # initialize the game
@@ -71,10 +73,13 @@ moveConductor = pyganim.PygConductor(animObjs)
 
 direction = DOWN # player starts off facing down (front)
 
-BASICFONT = pygame.font.Font('fonts/Roboto/Roboto-Regular.ttf', 18)
-WHITE = (255, 255, 255)
+FONT = pygame.font.Font('fonts/Roboto/Roboto-Regular.ttf', 18)
+WHITE = pygame.Color(255, 255, 255)
+BLACK = pygame.Color(0, 0, 0)
 
-mainClock = pygame.time.Clock()
+# Feel free to experiment with any FPS setting.
+FPS = 60
+fpsClock = pygame.time.Clock()
 
 # x and y are the player's position
 x = 350
@@ -82,13 +87,13 @@ y = 285
 WALKRATE = 3
 RUNRATE = 6
 
-instructionSurf = BASICFONT.render('Arrow keys to move. Hold shift to run. Press F key for fullscreen toggle.', True, WHITE)
+instructionSurf = FONT.render('ARROW keys to move. Hold SHIFT to run. F key for fullscreen toggle. Q key to quit.', True, WHITE)
 instructionRect = instructionSurf.get_rect()
 instructionRect.bottomleft = (10, WINDOWHEIGHT - 10)
 running = moveUp = moveDown = moveLeft = moveRight = False
 
 while True:
-    windowSurface.fill(0)
+    windowSurface.fill(BLACK)
     windowSurface.blit(backgroundImage, [0, 0])
     windowSurface.blit(instructionSurf, instructionRect)
 
@@ -230,5 +235,5 @@ while True:
         y = WINDOWHEIGHT - playerHeight
 
     pygame.display.update()
-    mainClock.tick(60) # Feel free to experiment with any FPS setting.
+    fpsClock.tick(FPS)
 
