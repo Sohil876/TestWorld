@@ -33,11 +33,11 @@ LEFT = 'left'
 RIGHT = 'right'
 
 # set up the window
-displayInfo = pygame.display.Info()
-WINDOWWIDTH = displayInfo.current_w
-WINDOWHEIGHT = displayInfo.current_h
+DISPLAYINFO = pygame.display.Info()
+WINDOWWIDTH = DISPLAYINFO.current_w
+WINDOWHEIGHT = DISPLAYINFO.current_h
 SIZE = (WINDOWWIDTH, WINDOWHEIGHT)
-windowSurface = pygame.display.set_mode(SIZE, DOUBLEBUF, 0)
+windowSurface = pygame.display.set_mode(SIZE, 0)
 pygame.display.set_caption('Test World!')
 flags = windowSurface.get_flags()
 backgroundImage = pygame.image.load('images/swamp.png').convert()
@@ -107,11 +107,9 @@ while True:
             if event.key == K_q:
                 pygame.quit()
                 sys.exit()
-
             if event.key in (K_LSHIFT, K_RSHIFT):
                 # player has started running
                 running = True
-
             if event.key == K_UP:
                 moveUp = False
                 moveDown = False
@@ -135,18 +133,17 @@ while True:
                     direction = RIGHT
             elif event.key == K_f:
                 if flags&FULLSCREEN == False:
-                    flags|=FULLSCREEN
+                    flags|=FULLSCREEN|DOUBLEBUF
                     pygame.display.set_mode(SIZE, flags, 0)
                 else:
-                    flags^=FULLSCREEN
+                    flags^=FULLSCREEN|DOUBLEBUF
                     pygame.display.set_mode(SIZE, flags, 0)
                     
             
         elif event.type == KEYUP:
             if event.key in (K_LSHIFT, K_RSHIFT):
                 # player has stopped running
-                running = False
-                
+                running = False                
             if event.key == K_UP:
                 moveUp = False
                 # if the player was moving in a sideways direction before, change the direction the player is facing.
