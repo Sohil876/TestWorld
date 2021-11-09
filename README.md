@@ -10,16 +10,19 @@
     - [Acode Editor](https://github.com/deadlyjack/code-editor)
     - [Markor](https://play.google.com/store/apps/details?id=net.gsantner.markor)
 
+- Indexes:
+    - [Awesome-Lua](https://github.com/JaredSartin/awesome-lua)
+    - [Awesoome-Lua Fork](https://github.com/uhub/awesome-lua)
+    - [Awesome-Love2d](https://github.com/love2d-community/awesome-love2d)
+
 - Libs:
-    - [STI](https://github.com/karai17/Simple-Tiled-Implementation)
-    - [Anim8](https://github.com/kikito/anim8)
     - [Paddy](https://github.com/Jigoku/paddy)
+
+- Resources:
+    - [Love2D Free Game Resources](https://love2d.org/wiki/Free_Game_Resources)
+    - [OpenGameART](https://opengameart.org)
 
 - Docs:
     - [Love2D Wiki](https://love2d.org/wiki/Main_Page)
     - [Sheepolution Love2d TuT](https://sheepolution.com/learn/book/contents)
-
-- Free stuff:
-    - [Love2D Free Game Resources](https://love2d.org/wiki/Free_Game_Resources)
-    - [OpenGameART](https://opengameart.org)
 
