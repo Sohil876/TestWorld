@@ -1,0 +1,52 @@
+.card {
+  margin: 2%;
+  padding: 1%;
+  color: inherit;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  /*transition: color 0.15s ease, border-color 0.15s ease;*/
+  width: 40%;
+}
+
+.listTitle {
+  font-size: 1.7rem;
+  color: #eaeaea;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #0070f3;
+  /*border-bottom: 1px solid #eaeaea;*/
+  margin: 2% 0 1% 0;
+  padding: 2% 0 2% 0;
+}
+
+.card ul {
+  list-style-type: none;
+}
+
+.card ul li::before {
+  content: "°";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #0070f3; /* Change the color */
+  /*font-weight: bold; If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.done {
+  color: green;
+}
+
+.learning {
+  color: darkorange;
+}
+
+.maybetodo {
+  color: rebeccapurple;
+}
+
+.todo {
+  color: saddlebrown;
+}
+

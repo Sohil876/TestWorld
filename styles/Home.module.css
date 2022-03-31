@@ -1,108 +1,199 @@
 .container {
-  padding: 0 2rem;
+  background-color: #000;
+  color: #ffffff;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
 }
 
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /*justify-content: center;*/
   align-items: center;
+  margin: inherit;
+  padding: inherit;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.description {
+  font-size: 1.8rem;
+  text-align: center;
+  margin: inherit;
+  padding: 2% 0 5% 0;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.description h1 {
+  font-size: 5rem;
+  text-decoration: underline;
+  margin: inherit;
+  padding: 0 0 5% 0;
 }
 
-.title a {
+.description h1 a {
   color: #0070f3;
   text-decoration: none;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
-  text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
 .code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
+  background: #0070f3;
+  color: #ffffff;
+  border-radius: 50px;
+  padding: 0.50rem;
+  font-size: 1.5rem;
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.splashBgParent {
+  position: relative;
+  top: 0;
+  left: 0;
+  margin: inherit;
+  padding: inherit;
 }
 
+.splashBg {
+  position: relative;
+  max-width: 80%;
+  max-height: auto;
+  border-radius: 300px;
+  margin: inherit;
+  padding: inherit;
+  top: 0;
+  left: 10%;
+}
+
+.profilePic {
+  position: absolute;
+  max-width: 30%;
+  max-height: auto;
+  margin: inherit;
+  padding: inherit;
+/*  border: 2px;
+  border-style: outset;
+  border-color: #0070f3 floralWhite floralWhite #0070f3;
+  border-radius: 250px;*/
+  top: 15%;
+  left: 38%;
+}
+
+.main h2 {
+  color: #eaeaea;
+  font-size: 2.5rem;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #0070f3;
+  margin: inherit;
+  padding: 3% 0 3% 0;
+}
+
+.grid {
+  flex: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: inherit;
+  padding: 0 0 5% 0;
+  width: 100%;
+}
+
+/*
 .card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
+  margin: inherit;
+  padding: inherit;
   color: inherit;
-  text-decoration: none;
   border: 1px solid #eaeaea;
   border-radius: 10px;
+  width: 50%;
   transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
   border-color: #0070f3;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
+
+.centeredList {
+  list-style-position: inside;
+  margin: inherit;
+  padding: 5% 20% 5% 20%;
+  min-width: 40%;
+  max-width: 80%;
+}
+
+.centeredList ol {
+  list-style-type: none;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.listTitle {
+  font-size: 1.6rem;
+  color: #0070f3;
+  text-align: center;
+  text-decoration: underline;
+  margin: 5% 0 1% 0;
+  padding: 5% 0 2% 0;
+}
+
+.centeredList ul {
+  list-style-type: circle;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+}
+
+.done {
+  color: green;
+}
+
+.learning {
+  color: darkorange;
+}
+
+.maybetodo {
+  color: rebeccapurple;
+}
+
+.todo {
+  color: saddlebrown;
+}
+*/
+
+.footer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: inherit;
+  padding: 5% 0 5% 0;
+  border-top: 1px solid #eaeaea;
   font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.footer a {
+  color: #0070f3;
 }
 
+.footerCard {
+  text-align: center;
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px solid #eaeaea;
+  /*transition: color 0.15s ease, border-color 0.15s ease;*/
+  margin: inherit;
+  padding: 2%;
+  width: 40%;
+}
+
+/*
 .logo {
   height: 1em;
   margin-left: 0.5rem;
@@ -114,3 +205,5 @@
     flex-direction: column;
   }
 }
+*/
+
