@@ -1,14 +1,14 @@
 {
   "name": "njs_ex_app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-static": "next build && next export",
+    "build-static": "rm -rf out && next build && next export",
     "start": "next start",
     "lint": "next lint",
-    "deploy-gh-pages": "next build && next export && git subtree push --prefix out origin gh-pages"
+    "deploy-gh-pages": "touch out/.nojekyll && cp -r out/* ~/njsexappEXPTD/ && rm -rf out"
   },
   "dependencies": {
     "next": "12.1.6",

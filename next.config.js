@@ -7,6 +7,7 @@ module.exports = {
       "/": { page: "/" },
     }
   },
+  swcMinify: true,
   assetPrefix: !debug ? 'http://sohil876.github.io/TestWorld/' : '',
   //nextConfig
   reactStrictMode: true,
