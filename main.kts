@@ -15,10 +15,12 @@ fun filelister() {
 
 fun main() {
     val lang: String = "Kotlin"
-    println("Hello " + lang + "! " + '(' + year + ')')
+    val takeInput = readLine()!!.toString()
+    println("Hello " + lang + " user! " + '(' + year + ')')
+    println("Your input is: " + takeInput)
 }
 
-filelister()
+//filelister()
 println("") // For new line
 main()
 
