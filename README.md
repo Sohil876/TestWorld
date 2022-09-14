@@ -10,6 +10,9 @@
   - [Markor](https://play.google.com/store/apps/details?id=net.gsantner.markor)
   - [Termux](https://f-droid.org/packages/com.termux)
 
+- CLI Programs:
+  - [kscript](https://github.com/kscripting/kscript)
+
 - Indexes:
   - [KotlinBy/awesome-kotlin](https://kotlin.link/resources)
   - [mcxiaoke/awesome-kotlin](https://github.com/mcxiaoke/awesome-kotlin)

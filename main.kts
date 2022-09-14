@@ -1,3 +1,4 @@
+#!/usr/bin/env kscript
 // Imports
 import java.io.File
 
@@ -15,9 +16,9 @@ fun filelister() {
 
 fun main() {
     val lang: String = "Kotlin"
-    val takeInput = readLine()!!.toString()
+    /*val takeInput = readLine()!!.toString()
+    println("Your input is: " + takeInput)*/
     println("Hello " + lang + " user! " + '(' + year + ')')
-    println("Your input is: " + takeInput)
 }
 
 //filelister()
