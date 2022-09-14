@@ -21,7 +21,9 @@ fun main() {
     println("Hello " + lang + " user! " + '(' + year + ')')
 }
 
-//filelister()
+// Only run file lister if -d dirname has been passed as argument, passing only -d will result in an error
+if (args.contains("-d")) filelister()
+
 println("") // For new line
 main()
 
