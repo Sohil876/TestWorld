@@ -14,6 +14,18 @@ fun filelister() {
     folders?.forEach { folder -> println(folder) }
 }
 
+fun calcSumDigit() {
+    val digit = if (args.contains("-csd")) args[1 + args.indexOf("-csd")].toInt()
+        else 0
+    var num = digit
+    var sum = 0
+    while (num != 0) {
+        sum = sum + num % 10
+        num = num / 10
+    }
+    println("The sum of " + digit.toString() + " is " + sum.toString())
+}
+
 fun main() {
     val lang: String = "Kotlin"
     /*val takeInput = readLine()!!.toString()
@@ -23,6 +35,8 @@ fun main() {
 
 // Only run file lister if -d dirname has been passed as argument, passing only -d will result in an error
 if (args.contains("-d")) filelister()
+// Only run sum calculator of digit if -csd int has been passed as argument, passing only -csd will result in an error
+if (args.contains("-csd")) calcSumDigit()
 
 println("") // For new line
 main()
